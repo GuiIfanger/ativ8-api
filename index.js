@@ -9,3 +9,7 @@ app.get('/data-hora', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`); // <-- Isso deve aparecer nos logs
 });
+
+fetch('https://ativ8-api.onrender.com/data-hora')
+  .then(res => res.json())
+  .then(data => console.log(data));
